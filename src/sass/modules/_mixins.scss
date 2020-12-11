@@ -1,0 +1,19 @@
+// FONTS //
+
+@mixin regular {
+  font-family: adobe-garamond-pro, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin italic-bold {
+  font-family: adobe-garamond-pro, serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+@mixin bold {
+  font-family: adobe-garamond-pro, serif;
+  font-weight: 700;
+  font-style: normal;
+}

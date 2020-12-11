@@ -1,0 +1,28 @@
+@import './base';
+
+.garnish-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+
+  &__item {
+    min-height: 100px;
+    width: 100px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 15%;
+  }
+
+  &__copy {
+    @include regular;
+    font-size: 18px;
+  }
+
+  &__img {
+  }
+}

@@ -1,0 +1,24 @@
+.button-container {
+  position: fixed;
+  bottom: 80px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-container:hover {
+  border: white;
+}
+
+.link-container {
+  min-width: 150px;
+  padding: 8px 30px;
+  margin: 0px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  text-transform: uppercase;
+  border: 2px solid black;
+}

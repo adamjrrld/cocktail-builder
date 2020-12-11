@@ -1,18 +1,37 @@
+import { useState } from 'react';
+import { nanoid } from 'nanoid';
 import NavButton from './components/navButton';
+import mixers from './data/Mixers';
+import SearchBar from './components/SearchBar';
+import ChosenList from './components/ChosenList';
+import ChosenIngredient from './components/ChosenList';
 
 function Mixers() {
+  const [list, setList] = useState([]);
+  function addIngredient(name) {
+    const newListItem = {
+      name: name,
+      id: 'ingredient' + nanoid(),
+      added: false,
+    };
+    setList([...list, newListItem]);
+  }
+  const chosenItem = list.map((ingredient) => (
+    <ChosenIngredient
+      id={ingredient.id}
+      name={ingredient.name}
+      added={ingredient.completed}
+      key={ingredient.id}
+    />
+  ));
   return (
     <section className="mixers">
-      <div className="mixers__input-wrap">
-        <input className="mixers__input" type="text" />
-        <label htmlFor="mixers__input"> Find your mixers</label>
-      </div>
-      <ul className="mixers__list">
-        <li className="mixers__list-item">
-          <p className="mixers__list-copy"></p>
-          <img className="mixers__list-cross" src="" alt="" />
-        </li>
-      </ul>
+      <ChosenList chosenItems={chosenItem} IngredientName="Drinks List" />
+      <SearchBar
+        placeholder={'Find your mixers'}
+        data={mixers}
+        addIngredient={addIngredient}
+      />
       <div className="button-container">
         <NavButton to="/booze" label="Back" />
         <NavButton to="/garnish" label="Next" />

@@ -1,0 +1,39 @@
+@import './base';
+
+.bar-container {
+  position: relative;
+  width: 500px;
+}
+
+.progress-bar {
+  position: relative;
+  height: 20px;
+  width: 100%;
+  border-radius: 50px;
+  border: 1px solid #333;
+
+  &__filler {
+    background-color: darkcyan;
+    height: 100%;
+    width: 20%;
+    border-radius: inherit;
+    transition: width 0.2s ease-in;
+  }
+}
+
+.bar-list {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  padding: 0;
+  &__item {
+    width: 60px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+}

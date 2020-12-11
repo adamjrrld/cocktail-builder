@@ -3,3 +3,33 @@
 body {
   background-color: $background-colour;
 }
+
+h2 {
+  @include italic-bold;
+  font-size: 28px;
+}
+
+p {
+  @include bold;
+  font-size: 24px;
+}
+
+/* unvisited link */
+a:link {
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  color: white;
+}
+
+/* selected link */
+a:active {
+  color: white;
+}
