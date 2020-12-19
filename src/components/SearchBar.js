@@ -38,6 +38,7 @@ function SearchBar({ placeholder, data, addIngredient }) {
             type="search"
             onChange={handleChange}
             placeholder={placeholder}
+            autoComplete="off"
           />
         </label>
       </form>

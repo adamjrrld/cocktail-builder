@@ -3,7 +3,7 @@ const booze = [
   'White Rum',
   'Triple Sec',
   'Dry Vermouth',
-  'Swee Vermouth',
+  'Sweet Vermouth',
   'Cognac',
   'Bourbon',
   'Tequila',
